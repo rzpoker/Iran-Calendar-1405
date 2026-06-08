@@ -55,14 +55,6 @@
 
 ---
 
-## 🚀 نحوه استفاده
-
-### دریافت مستقیم از طریق Raw URL
-```
-https://raw.githubusercontent.com/<username>/<repo>/main/calendar-1405.json
-```
-
----
 
 ## 🤝 مشارکت
 
