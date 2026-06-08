@@ -1,0 +1,100 @@
+# تقویم شمسی ۱۴۰۵ (JSON)
+
+<div align="center">
+
+![Year](https://img.shields.io/badge/Year-1405-blue?style=flat-square)
+![Format](https://img.shields.io/badge/Format-JSON-orange?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+![Lang](https://img.shields.io/badge/Language-Persian-red?style=flat-square)
+
+</div>
+
+تقویم کامل سال **۱۴۰۵ هجری شمسی** در قالب **JSON**، شامل تمام روزهای سال به همراه مشخص بودن **تعطیلات رسمی** و **مناسبت‌ها**.
+
+---
+
+## ✨ چرا این تقویم؟
+
+در پروژه‌های مختلف نیاز به یک تقویم دقیق شمسی داشتم، اما تقریباً تمام منابع آماده‌ای که پیدا کردم (چه ریپوهای گیت‌هاب و چه APIها) **با تقویم رسمی کشور همخوانی کامل نداشتند**؛ بعضی تعطیلات جا افتاده بودند، بعضی تاریخ‌های مناسبت‌ها اشتباه بود و در مواردی حتی تعداد روزهای ماه‌ها درست محاسبه نشده بود.
+
+به همین دلیل یکی از تقویم‌های موجود را به‌عنوان پایه برداشتم، **تمام تاریخ‌ها و مناسبت‌ها را با تقویم رسمی تطبیق دادم** و خطاهایش را اصلاح کردم تا یک نسخه قابل اتکا برای استفاده در پروژه‌های واقعی داشته باشم.
+
+---
+
+## 📦 ساختار داده
+
+فایل JSON شامل یک آرایه به نام `data` است که هر عنصر آن یک روز از سال را توصیف می‌کند:
+
+```json
+{
+  "data": [
+    {
+      "date": "1405/01/01",
+      "shamsiDate": "1405/01/01",
+      "isHoliday": true,
+      "holidayDesription": "جشن نوروز/جشن سال نو"
+    },
+    {
+      "date": "1405/01/02",
+      "shamsiDate": "1405/01/02",
+      "isHoliday": true,
+      "holidayDesription": "عیدنوروز"
+    }
+  ]
+}
+```
+
+### توضیح فیلدها
+
+| فیلد | نوع | توضیح |
+|------|-----|--------|
+| `date` | `string` | تاریخ روز به فرمت `YYYY/MM/DD` شمسی |
+| `shamsiDate` | `string` | تاریخ شمسی (در حال حاضر مشابه `date`) |
+| `isHoliday` | `boolean` | آیا این روز تعطیل رسمی است یا خیر |
+| `holidayDesription` | `string` | عنوان مناسبت یا تعطیلی (در صورت وجود) |
+
+---
+
+## 🚀 نحوه استفاده
+
+### JavaScript / Node.js
+```js
+import calendar from "./calendar-1405.json";
+
+const holidays = calendar.data.filter(day => day.isHoliday);
+console.log(`تعداد تعطیلات سال ۱۴۰۵: ${holidays.length}`);
+```
+
+### Python
+```python
+import json
+
+with open("calendar-1405.json", encoding="utf-8") as f:
+    calendar = json.load(f)
+
+holidays = [d for d in calendar["data"] if d["isHoliday"]]
+print(f"تعداد تعطیلات: {len(holidays)}")
+```
+
+### دریافت مستقیم از طریق Raw URL
+```
+https://raw.githubusercontent.com/<username>/<repo>/main/calendar-1405.json
+```
+
+---
+
+## 🤝 مشارکت
+
+اگر در تاریخ یا توضیح مناسبتی **اشتباهی** دیدید، خوشحال می‌شم با باز کردن یک [Issue](../../issues) یا ارسال [Pull Request](../../pulls) اصلاحش کنیم. هدف این ریپو، نگهداری یک نسخه **دقیق و قابل اعتماد** از تقویم رسمی است.
+
+---
+
+## 📄 لایسنس
+
+این پروژه تحت لایسنس [MIT](LICENSE) منتشر شده است؛ آزادانه در پروژه‌های شخصی و تجاری استفاده کنید.
+
+---
+
+<div align="center">
+ساخته شده با ❤️ برای جامعه توسعه‌دهندگان فارسی‌زبان
+</div>
