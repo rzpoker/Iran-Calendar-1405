@@ -57,25 +57,6 @@
 
 ## 🚀 نحوه استفاده
 
-### JavaScript / Node.js
-```js
-import calendar from "./calendar-1405.json";
-
-const holidays = calendar.data.filter(day => day.isHoliday);
-console.log(`تعداد تعطیلات سال ۱۴۰۵: ${holidays.length}`);
-```
-
-### Python
-```python
-import json
-
-with open("calendar-1405.json", encoding="utf-8") as f:
-    calendar = json.load(f)
-
-holidays = [d for d in calendar["data"] if d["isHoliday"]]
-print(f"تعداد تعطیلات: {len(holidays)}")
-```
-
 ### دریافت مستقیم از طریق Raw URL
 ```
 https://raw.githubusercontent.com/<username>/<repo>/main/calendar-1405.json
@@ -89,11 +70,6 @@ https://raw.githubusercontent.com/<username>/<repo>/main/calendar-1405.json
 
 ---
 
-## 📄 لایسنس
-
-این پروژه تحت لایسنس [MIT](LICENSE) منتشر شده است؛ آزادانه در پروژه‌های شخصی و تجاری استفاده کنید.
-
----
 
 <div align="center">
 ساخته شده با ❤️ برای جامعه توسعه‌دهندگان فارسی‌زبان
