@@ -4,7 +4,6 @@
 
 ![Year](https://img.shields.io/badge/Year-1405-blue?style=flat-square)
 ![Format](https://img.shields.io/badge/Format-JSON-orange?style=flat-square)
-![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 ![Lang](https://img.shields.io/badge/Language-Persian-red?style=flat-square)
 
 </div>
